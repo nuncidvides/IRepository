@@ -9,6 +9,6 @@ namespace Interview
     [TestFixture]
     public class Tests
     {
-        
+
     }
 }

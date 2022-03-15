@@ -1,0 +1,10 @@
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\obj\Debug\TechTest.csproj.AssemblyReference.cache
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\obj\Debug\TechTest.csproj.CoreCompileInputs.cache
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\bin\Debug\Interview.dll
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\bin\Debug\Interview.pdb
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\bin\Debug\nunit.framework.dll
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\bin\Debug\nunit.framework.xml
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\obj\Debug\TechTest.csproj.CopyComplete
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\obj\Debug\Interview.dll
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\obj\Debug\Interview.pdb

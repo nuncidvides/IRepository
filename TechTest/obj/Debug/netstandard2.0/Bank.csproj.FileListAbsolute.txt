@@ -1,0 +1,10 @@
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\bin\Debug\netstandard2.0\Bank.deps.json
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\bin\Debug\netstandard2.0\Bank.dll
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\bin\Debug\netstandard2.0\Bank.pdb
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.csproj.AssemblyReference.cache
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.AssemblyInfoInputs.cache
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.AssemblyInfo.cs
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.csproj.CoreCompileInputs.cache
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.dll
+C:\Users\secro\Downloads\UnitTesting-master\UnitTesting-master\Bank\obj\Debug\netstandard2.0\Bank.pdb

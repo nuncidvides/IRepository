@@ -1,0 +1,9 @@
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\bin\Debug\netstandard2.0\TechTest.deps.json
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\bin\Debug\netstandard2.0\TechTest.dll
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\bin\Debug\netstandard2.0\TechTest.pdb
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\obj\Debug\netstandard2.0\TechTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\obj\Debug\netstandard2.0\TechTest.AssemblyInfoInputs.cache
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\obj\Debug\netstandard2.0\TechTest.AssemblyInfo.cs
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\obj\Debug\netstandard2.0\TechTest.csproj.CoreCompileInputs.cache
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\obj\Debug\netstandard2.0\TechTest.dll
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TMP\Bank\obj\Debug\netstandard2.0\TechTest.pdb

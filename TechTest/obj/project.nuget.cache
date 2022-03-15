@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JAjYnxYHn93JP67wV0NapB3jjEz3HwXz9mbWMwtnsJE2My0rrPp4iDKatwr43kPwTiuTOK9F56TGuLjCp7ENtg==",
+  "dgSpecHash": "dFQY309EKhzoquGH0W8cJKzBaHYpT6UrBicIP49ABnob/qZf3gxS9YscRyL0T8I3f3kaalXmXXDswmLitjRo+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj",
+  "projectFilePath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTest\\TechTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\secro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\secro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

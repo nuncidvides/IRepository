@@ -4644,11 +4644,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\BankNUnitTests\\TechTestNUnitTests.csproj",
+      "projectUniqueName": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTestNUnitTests\\TechTestNUnitTests.csproj",
       "projectName": "TechTestNUnitTests",
-      "projectPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\BankNUnitTests\\TechTestNUnitTests.csproj",
+      "projectPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTestNUnitTests\\TechTestNUnitTests.csproj",
       "packagesPath": "C:\\Users\\secro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\BankNUnitTests\\obj\\",
+      "outputPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTestNUnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\secro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4665,8 +4665,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj": {
-              "projectPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj"
+            "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\Bank\\TechTest.csproj": {
+              "projectPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\Bank\\TechTest.csproj"
             }
           }
         }

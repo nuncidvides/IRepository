@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PcA0tLtocUooDH8fEv40aam5CDAVclJyX4sTsMT41o8gt7HHyVEQ2hczHM5SKmyxmAwEhS8PSsisAM3JEsC4vg==",
+  "dgSpecHash": "AjaTFMp9i9Mz8dEo4bM69SypQf//dYxPxMNaT09mjZ5bNyqzFfxR7hbQpRwOHvCRjmpJgRZqCxtiITOZ+sB0KA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\BankNUnitTests\\TechTestNUnitTests.csproj",
+  "projectFilePath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTestNUnitTests\\TechTestNUnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\secro\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\secro\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",

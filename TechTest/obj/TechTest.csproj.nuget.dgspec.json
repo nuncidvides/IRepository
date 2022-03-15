@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj": {}
+    "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTest\\TechTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj": {
+    "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTest\\TechTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj",
+        "projectUniqueName": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTest\\TechTest.csproj",
         "projectName": "TechTest",
-        "projectPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\TechTest.csproj",
+        "projectPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTest\\TechTest.csproj",
         "packagesPath": "C:\\Users\\secro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TMP\\Bank\\obj\\",
+        "outputPath": "C:\\Users\\secro\\Documents\\GitHub\\PoppuloTechnicalTest\\TechTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\secro\\AppData\\Roaming\\NuGet\\NuGet.Config",

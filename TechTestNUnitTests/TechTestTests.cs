@@ -47,7 +47,7 @@ namespace TechTestNUnitTests
         public void GetAll_StoreableObjectPassed()
         {
             // Arrange
-            Storeable sampleObject = new Storeable() { Id = "1" };
+            Storeable sampleObject = new Storeable() { Id = 1 };
             var sampleList = new List<Storeable>() { sampleObject };
 
             var context = new Mock<DbContext>();
@@ -68,13 +68,27 @@ namespace TechTestNUnitTests
         }
 
         [Test]
-        public void GetByID()
+        public void GetByID_StoreableObjectPassed()
         {
             // Arrange
+            Storeable sampleObject = new Storeable() { Id = 1 };
+            var sampleList = new List<Storeable>() { sampleObject };
+
+            var context = new Mock<DbContext>();
+            var dbSetMock = new Mock<DbSet<Storeable>>();
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.Provider).Returns(sampleList.AsQueryable().Provider);
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.Expression).Returns(sampleList.AsQueryable().Expression);
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.ElementType).Returns(sampleList.AsQueryable().ElementType);
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.GetEnumerator()).Returns(sampleList.AsQueryable().GetEnumerator());
+
+            context.Setup(x => x.Set<Storeable>()).Returns(dbSetMock.Object);
 
             // Act
+            var repository = new Repository<Storeable>(context.Object);
+            Storeable result = repository.FindById(1);
 
             // Assert
+            Assert.Equals(result, sampleObject);
         }
 
         [Test]

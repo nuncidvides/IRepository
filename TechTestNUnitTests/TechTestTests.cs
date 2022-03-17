@@ -92,7 +92,7 @@ namespace TechTestNUnitTests
         }
 
         [Test]
-        public void Delete()
+        public void Delete_StoreableObjectPassed()
         {
             // Arrange
             Storeable sampleObject = new Storeable();

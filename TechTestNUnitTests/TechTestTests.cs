@@ -95,10 +95,20 @@ namespace TechTestNUnitTests
         public void Delete()
         {
             // Arrange
+            Storeable sampleObject = new Storeable();
+
+            var context = new Mock<DbContext>();
+            var dbSetMock = new Mock<DbSet<Storeable>>();
+            context.Setup(x => x.Set<Storeable>()).Returns(dbSetMock.Object);
+            dbSetMock.Setup(x => x.Add(It.IsAny<Storeable>())).Returns(sampleObject);
 
             // Act
+            var repository = new Repository<Storeable>(context.Object);
+            repository.Delete(1);
 
             // Assert
+            context.Verify(x => x.Set<Storeable>());
+            dbSetMock.Verify(x => x.Remove(It.Is<Storeable>(y => y == sampleObject)));
         }
     }
 

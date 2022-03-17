@@ -7,16 +7,9 @@ namespace TechTest
 
     public interface IRepository<T> where T : IStoreable
     {
-        // Get all
-        IEnumerable<T> All();
-
-        // Remove
-        void Delete(IComparable id);
-
-        // Find
+        IEnumerable<T> GetAll();
         T FindById(IComparable id);
-
-        // Update - needs a unit of work
+        void Delete(IComparable id);
         void Save(T item);
     }
 }

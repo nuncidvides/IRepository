@@ -4,7 +4,8 @@ using System.Text;
 
 namespace TechTest
 {
-    class Storeable
+    public class Storeable : IStoreable
     {
+        public IComparable Id { get; set; }
     }
 }

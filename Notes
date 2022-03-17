@@ -1,6 +1,10 @@
 Notes:
 * Had issues with initial dev. env. For speed/time, replaced project for working NUnit tests.
 * Have left all steps in the repo, including those not generally commited, e.g. setting up the dev. env. This is to provide insight into the process.
+* Some suggestions that CQSR should be pursued rather than Repository pattern. Deemed outside of scope for now, but worth future investigation.
+* Opted for Entity Framework approach due to speed of implementation.
+* Prime for MVC pattern, but outside scope for now.
+* Started with sample entity, but migrated to generic repository
 
 Resources:
 https://www.youtube.com/watch?v=rtXpYpZdOzM
@@ -12,3 +16,5 @@ https://www.infoworld.com/article/3107186/how-to-implement-the-repository-design
 https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
 https://www.c-sharpcorner.com/blogs/c-sharp-repository-pattern
 https://stackoverflow.com/questions/4528712/what-is-a-irepository-and-what-is-it-used-for
+https://dotnettutorials.net/lesson/repository-design-pattern-csharp/
+https://rubikscode.net/2018/04/16/implementing-and-testing-repository-pattern-using-entity-framework/

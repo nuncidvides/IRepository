@@ -1,0 +1,14 @@
+Notes:
+* Had issues with initial dev. env. For speed/time, replaced project for working NUnit tests.
+* Have left all steps in the repo, including those not generally commited, e.g. setting up the dev. env. This is to provide insight into the process.
+
+Resources:
+https://www.youtube.com/watch?v=rtXpYpZdOzM
+http://www.bradoncode.com/blog/2012/12/how-to-unit-test-repository.html
+https://www.digitalocean.com/community/conceptual_articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design
+https://www.codeguru.com/csharp/repository-pattern-c-sharp/
+https://codewithshadman.com/repository-pattern-csharp/
+https://www.infoworld.com/article/3107186/how-to-implement-the-repository-design-pattern-in-c.html
+https://docs.microsoft.com/en-us/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application
+https://www.c-sharpcorner.com/blogs/c-sharp-repository-pattern
+https://stackoverflow.com/questions/4528712/what-is-a-irepository-and-what-is-it-used-for

@@ -1,10 +1,9 @@
 ﻿using System;
 
-namespace Interview
+namespace TechTest
 {
     public interface IStoreable
     {
         IComparable Id { get; set; }
     }
-
 }

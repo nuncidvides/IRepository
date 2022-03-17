@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
+using System.Linq;
 using TechTest;
 
 namespace TechTestNUnitTests
@@ -23,7 +24,7 @@ namespace TechTestNUnitTests
         /// </summary>
         /// <returns>The ID of the new record</returns>
         [Test]
-        public void Add_StoreableObjectpassed()
+        public void Add_StoreableObjectPassed()
         {
             // Arrange
             Storeable sampleObject = new Storeable();
@@ -43,23 +44,27 @@ namespace TechTestNUnitTests
         }
 
         [Test]
-        public void Update()
+        public void GetAll_StoreableObjectPassed()
         {
             // Arrange
+            Storeable sampleObject = new Storeable() { Id = "1" };
+            var sampleList = new List<Storeable>() { sampleObject };
+
+            var context = new Mock<DbContext>();
+            var dbSetMock = new Mock<DbSet<Storeable>>();
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.Provider).Returns(sampleList.AsQueryable().Provider);
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.Expression).Returns(sampleList.AsQueryable().Expression);
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.ElementType).Returns(sampleList.AsQueryable().ElementType);
+            dbSetMock.As<IQueryable<Storeable>>().Setup(x => x.GetEnumerator()).Returns(sampleList.AsQueryable().GetEnumerator());
+
+            context.Setup(x => x.Set<Storeable>()).Returns(dbSetMock.Object);
 
             // Act
+            var repository = new Repository<Storeable>(context.Object);
+            var result = repository.GetAll();
 
             // Assert
-        }
-
-        [Test]
-        public void GetAll()
-        {
-            // Arrange
-
-            // Act
-
-            // Assert
+            Assert.That(result.ToList(), Is.EquivalentTo(sampleList));
         }
 
         [Test]

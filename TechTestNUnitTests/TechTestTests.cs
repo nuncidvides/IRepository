@@ -11,12 +11,19 @@ namespace TechTestNUnitTests
 {
     public class TechTestTests
     {
-        IRepository<IStoreable> _repository;
+        private readonly Mock<IRepository<Storeable>> _repository = new Mock<IRepository<Storeable>>();
+        List<Storeable> bookInMemoryDatabase = new List<Storeable>
+        {
+            new Storeable() {Id = 1},
+            new Storeable() {Id = 2},
+            new Storeable() {Id = 3}
+        };
+
 
         [SetUp]
         public void Setup()
         {
-            _repository = (IRepository<IStoreable>)RepositoryFactory.Instance("SampleRepository");
+            //_repository.Setup(x => x.get)
         }
 
         /// <summary>
@@ -41,6 +48,7 @@ namespace TechTestNUnitTests
             // Assert
             context.Verify(x => x.Set<Storeable>());
             dbSetMock.Verify(x => x.Add(It.Is<Storeable>(y => y == sampleObject)));
+            Assert.Fail();
         }
 
         [Test]
@@ -95,20 +103,21 @@ namespace TechTestNUnitTests
         public void Delete_StoreableObjectPassed()
         {
             // Arrange
-            Storeable sampleObject = new Storeable();
+            var storeableInMemoryDatabase = new List<Storeable>
+            {
+                new Storeable() {Id = 1},
+                new Storeable() {Id = 2},
+                new Storeable() {Id = 3}
+            };
 
-            var context = new Mock<DbContext>();
-            var dbSetMock = new Mock<DbSet<Storeable>>();
-            context.Setup(x => x.Set<Storeable>()).Returns(dbSetMock.Object);
-            dbSetMock.Setup(x => x.Add(It.IsAny<Storeable>())).Returns(sampleObject);
+            var repository = new Mock<IRepository<Storeable>>();
+
+            repository.Setup(x => x.FindById(It.IsAny<int>())).Returns((IComparable i) => storeableInMemoryDatabase.Single(x => x.Id == i));
 
             // Act
-            var repository = new Repository<Storeable>(context.Object);
-            repository.Delete(1);
+            repository.Object.Delete(1);
 
-            // Assert
-            context.Verify(x => x.Set<Storeable>());
-            dbSetMock.Verify(x => x.Remove(It.Is<Storeable>(y => y == sampleObject)));
+            repository.Verify(r => r.Delete(1));
         }
     }
 

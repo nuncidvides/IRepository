@@ -16,3 +16,4 @@ C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TechTest\obj\Debug\netstand
 C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TechTest\bin\Debug\netstandard2.0\TechTest.deps.json
 C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TechTest\bin\Debug\netstandard2.0\TechTest.dll
 C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TechTest\bin\Debug\netstandard2.0\TechTest.pdb
+C:\Users\secro\Documents\GitHub\PoppuloTechnicalTest\TechTest\obj\Debug\netstandard2.0\TechTest.csproj.AssemblyReference.cache

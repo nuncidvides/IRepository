@@ -7,24 +7,25 @@ namespace TechTest
 {
     public class Repository<T> : IRepository<T> where T : Storeable
     {
-        public List<Storeable> _proxyData; // Stand-in for actual data source
+        public List<T> _proxyData; // Stand-in for actual data source
         protected readonly DbContext _context;
         protected readonly DbSet<T> _entities;
 
         public Repository()
         {
-
+            _proxyData = new List<T>();
         }
 
         public Repository(DbContext context)
         {
+            _proxyData = new List<T>();
             _context = context;
             _entities = _context.Set<T>();
         }
 
         public T FindById(IComparable id)
         {
-            return _proxyData.Find(x => x.Id == id) as T;
+            return _proxyData.Find(x => x.Id.Equals(id));
             //return _entities.Find(id);
         }
 

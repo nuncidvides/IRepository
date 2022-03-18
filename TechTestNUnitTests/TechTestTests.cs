@@ -32,10 +32,33 @@ namespace TechTestNUnitTests
         }
 
         /// <summary>
-        /// Creates this instance
+        /// Create a storeable object
+        /// Save to repository
+        /// Verify added
+        /// </summary>
+        [Test]
+        public void Save_StoreableObjectPassed()
+        {
+            // Arrange
+            var testId = 4;
+            Storeable sampleObject = new Storeable() { Id = testId };
+
+            // Act
+            _repository.Save(sampleObject);
+
+            // Assert
+            var result = _repository.FindById(testId);
+            if (result != null) 
+                Assert.Pass();
+            else 
+                Assert.Fail();
+        }
+
+        /// <summary>
+        /// Creates this instance   
         /// </summary>
         /// <returns>The ID of the new record</returns>
-        [Test]
+        /*[Test]
         public void Add_StoreableObjectPassed()
         {
             // Arrange
@@ -54,8 +77,27 @@ namespace TechTestNUnitTests
             context.Verify(x => x.Set<Storeable>());
             dbSetMock.Verify(x => x.Add(It.Is<Storeable>(y => y == sampleObject)));
             Assert.Fail();
+        }*/
+
+        /// <summary>
+        /// Get all from repository
+        /// Assert equal to dummyData
+        /// Note: I feel that I should be dumping the repo between tests
+        /// to ensure that they do not interfere with each other
+        /// </summary>
+        [Test]
+        public void GetAll()
+        {
+            // Arrange
+
+            // Act
+            var result = _repository.GetAll();
+
+            // Assert
+            Assert.That(result.ToList(), Is.EquivalentTo(dummyData));
         }
 
+        /*
         [Test]
         public void GetAll_StoreableObjectPassed()
         {
@@ -78,8 +120,27 @@ namespace TechTestNUnitTests
 
             // Assert
             Assert.That(result.ToList(), Is.EquivalentTo(sampleList));
+        }*/
+
+        /// <summary>
+        /// Retrieve item by ID from repository
+        /// Assert is equal to item from dummyData
+        /// </summary>
+        [Test]
+        public void GetByID()
+        {
+            // Arrange
+            IComparable testId = 2;
+            var sampleItem = dummyData.Find(x => x.Id.Equals(testId));
+
+            // Act
+            var result = _repository.FindById(2);
+
+            // Assert
+            Assert.AreEqual(sampleItem, result);
         }
 
+        /*
         [Test]
         public void GetByID_StoreableObjectPassed()
         {
@@ -102,8 +163,31 @@ namespace TechTestNUnitTests
 
             // Assert
             Assert.Equals(result, sampleObject);
+        }*/
+
+        /// <summary>
+        /// Get an item from dummyData
+        /// Remove that item from repository
+        /// Assert item is not found
+        /// </summary>
+        [Test]
+        public void Delete_StoreableObject()
+        {
+            // Arrange
+            var testId = 3;
+
+            // Act
+            _repository.Delete(testId);
+
+            // Assert
+            var result = _repository.FindById(testId);
+            if (result == null)
+                Assert.Pass();
+            else
+                Assert.Fail();
         }
 
+        /*
         [Test]
         public void Delete_StoreableObjectPassed()
         {
@@ -123,7 +207,7 @@ namespace TechTestNUnitTests
             repository.Object.Delete(1);
 
             repository.Verify(r => r.Delete(1));
-        }
+        }*/
     }
 
     internal class RepositoryFactory

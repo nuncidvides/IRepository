@@ -134,10 +134,27 @@ namespace TechTestNUnitTests
             var sampleItem = dummyData.Find(x => x.Id.Equals(testId));
 
             // Act
-            var result = _repository.FindById(2);
+            var result = _repository.FindById(testId);
 
             // Assert
             Assert.AreEqual(sampleItem, result);
+        }
+
+        /// <summary>
+        /// Testing the make sure we get a null result
+        /// when searching for a missing item
+        /// </summary>
+        [Test]
+        public void GetByID_InvalidID()
+        {
+            // Arrange
+            IComparable testId = -1;
+
+            // Act
+            var result = _repository.FindById(testId);
+
+            // Assert
+            Assert.IsNull(result);
         }
 
         /*

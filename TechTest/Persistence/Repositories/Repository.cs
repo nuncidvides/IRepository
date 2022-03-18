@@ -7,22 +7,19 @@ namespace TechTest
 {
     public class Repository<T> : IRepository<T> where T : Storeable
     {
-        List<Storeable> _proxyData; // Stand-in for actual data source
+        public List<Storeable> _proxyData; // Stand-in for actual data source
         protected readonly DbContext _context;
         protected readonly DbSet<T> _entities;
+
+        public Repository()
+        {
+
+        }
 
         public Repository(DbContext context)
         {
             _context = context;
             _entities = _context.Set<T>();
-        }
-
-        /// <summary>
-        /// This is just a stand-in for a system with proper data loading/contexts
-        /// </summary>
-        public void LoadProxyData(List<Storeable> data)
-        {
-            _proxyData = data;
         }
 
         public T FindById(IComparable id)

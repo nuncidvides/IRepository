@@ -11,8 +11,9 @@ namespace TechTestNUnitTests
 {
     public class TechTestTests
     {
-        private readonly Mock<IRepository<Storeable>> _repository = new Mock<IRepository<Storeable>>();
-        List<Storeable> bookInMemoryDatabase = new List<Storeable>
+        //private readonly Mock<IRepository<Storeable>> _repository = new Mock<IRepository<Storeable>>();
+        private IRepository<Storeable> _repository;
+        List<Storeable> dummyData = new List<Storeable>
         {
             new Storeable() {Id = 1},
             new Storeable() {Id = 2},
@@ -23,7 +24,11 @@ namespace TechTestNUnitTests
         [SetUp]
         public void Setup()
         {
-            //_repository.Setup(x => x.get)
+            _repository = new Repository<Storeable>();
+
+            _repository.Save(dummyData[0]);
+            _repository.Save(dummyData[1]);
+            _repository.Save(dummyData[2]);
         }
 
         /// <summary>

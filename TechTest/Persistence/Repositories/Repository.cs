@@ -7,6 +7,7 @@ namespace TechTest
 {
     public class Repository<T> : IRepository<T> where T : Storeable
     {
+        List<Storeable> _proxyData; // Stand-in for actual data source
         protected readonly DbContext _context;
         protected readonly DbSet<T> _entities;
 
@@ -16,24 +17,36 @@ namespace TechTest
             _entities = _context.Set<T>();
         }
 
+        /// <summary>
+        /// This is just a stand-in for a system with proper data loading/contexts
+        /// </summary>
+        public void LoadProxyData(List<Storeable> data)
+        {
+            _proxyData = data;
+        }
+
         public T FindById(IComparable id)
         {
-            return _entities.Find(id);
+            return _proxyData.Find(x => x.Id == id) as T;
+            //return _entities.Find(id);
         }
 
         public IEnumerable<T> GetAll()
         {
-            return _entities.ToList();
+            return _proxyData.ToList() as IEnumerable<T>;
+            //return _entities.ToList();
         }
         
         public void Delete(IComparable id)
         {
-            _entities.Remove(FindById(id));
+            _proxyData.Remove(FindById(id));
+            //_entities.Remove(FindById(id));
         }        
 
         public void Save(T item)
         {
-            _entities.Add(item);
+            _proxyData.Add(item);
+            //_entities.Add(item);
         }
     }
 }
